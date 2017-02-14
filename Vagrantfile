@@ -9,10 +9,11 @@ Vagrant.configure("2") do |config|
   # config.vm.network "public_network"
   # config.vm.synced_folder "../data", "/vagrant_data"
   config.vm.provider "virtualbox" do |vb|
-    vb.memory = "1024"
+    vb.memory = "2048"
   end
 
   config.vm.provision "shell", path: "utils/install_docker.sh"
   config.vm.provision "shell", path: "utils/run_redis.sh"
+  config.vm.provision "shell", path: "utils/run_cassandra.sh"
 
 end
