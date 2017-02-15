@@ -10,3 +10,8 @@ git clone https://github.com/afritzler/rss-crawlr.git
 cd rss-crawlr
 vagrant up
 ```
+
+To remove everything from your local machine run
+```
+vagrant destroy -f
+```
