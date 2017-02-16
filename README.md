@@ -23,7 +23,12 @@ cd rss-crawlr
 ./utils/run_services.sh
 ```
 
-## Local development using Vagrant
+To stop and remove the dockerized Redis and Cassandra container run:
+```
+./utils/stop_services.sh
+```
+
+# Local development using Vagrant
 
 ___Prerequisites___
 * Vagrant
