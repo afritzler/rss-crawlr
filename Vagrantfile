@@ -13,7 +13,6 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.provision "shell", path: "utils/install_docker.sh"
-  config.vm.provision "shell", path: "utils/run_redis.sh"
-  config.vm.provision "shell", path: "utils/run_cassandra.sh"
+  config.vm.provision "shell", path: "utils/run_services.sh"
 
 end
