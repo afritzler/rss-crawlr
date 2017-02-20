@@ -17,8 +17,6 @@ class Config:
         with open(self.config_file, 'r') as ymlfile:
             try:
                 self.cfg = yaml.load(ymlfile)
-                for section in self.cfg:
-                    print(section)
             except yaml.YAMLError as exc:
                 print(exc)
                 return None
