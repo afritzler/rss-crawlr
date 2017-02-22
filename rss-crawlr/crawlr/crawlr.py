@@ -1,11 +1,16 @@
 from config import Config
 import feedparser
+import redis
+import os
 
 
 class Crawlr:
 
     def __init__(self, rss_feed_file):
         self.config_file = rss_feed_file
+        self.cache = redis.StrictRedis(host=os.getenv('REDIS_HOST', 'localhost'),
+                                       port=os.getenv('REDIS_POST', 6379),
+                                       db=0)
 
     def start(self):
         print "Starting crawlr ..."
