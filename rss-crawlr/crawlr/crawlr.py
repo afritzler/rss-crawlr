@@ -16,6 +16,12 @@ class Crawlr:
         print "Creating cassandra cluster connection ..."
         self.cluster = Cluster([os.getenv('CASSANDRA _HOST', 'localhost')])
 
+    def initialize_cache(self):
+        return self.cache
+
+    def initialize_database(self):
+        return self.cluster
+
     def start(self):
         print "Starting crawlr ..."
         config = Config(self.config_file)
