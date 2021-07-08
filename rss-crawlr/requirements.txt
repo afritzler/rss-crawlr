@@ -1,4 +1,4 @@
-cassandra-driver==3.9.0
+cassandra-driver==3.25.0
 feedparser==5.2.1
 futures==3.1.1
 PyYAML==5.4.1
